@@ -2,7 +2,7 @@ library device_user_agent;
 
 import 'package:device_user_agent/src/agent_info.dart';
 import 'package:flutter/foundation.dart';
-// import 'package:web/web.dart' show window;
+import 'package:web/web.dart';
 
 class DeviceUserAgent {
   const DeviceUserAgent._() : agentInfo = const AgentInfo();
@@ -16,12 +16,7 @@ class DeviceUserAgent {
   static DeviceUserAgent? _instance;
 
   Future<String> build() async {
-    // print(kIsWeb);
-    // try {
-    //   if (kIsWeb) return window.navigator.userAgent;
-    // } catch (e) {
-    //   print('Error $e');
-    // }
+    if (kIsWeb) return window.navigator.userAgent;
 
     final appName = await agentInfo.packageName;
     final appVersionName = await agentInfo.appVersionName;
