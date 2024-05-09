@@ -17,3 +17,4 @@ jobs:
 
       - name: Publish package distributions to PyPI
         run: pdm publish
+        working-directory: ./parser/python
