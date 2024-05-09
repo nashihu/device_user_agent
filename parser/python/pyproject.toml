@@ -19,8 +19,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/AcmeSoftwareLLC/device_user_agent/"
-Repository = "https://github.com/AcmeSoftwareLLC/device_user_agent/"
+Homepage = "https://acmesoftware.com"
+Repository = "https://github.com/AcmeSoftwareLLC/device_user_agent/tree/main/parser/python"
 
 [build-system]
 requires = ["pdm-backend"]
