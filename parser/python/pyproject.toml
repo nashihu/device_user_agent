@@ -11,6 +11,16 @@ dependencies = [
 requires-python = ">=3.12"
 readme = "README.md"
 license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed"
+]
+
+[project.urls]
+Homepage = "https://github.com/AcmeSoftwareLLC/device_user_agent/"
+Repository = "https://github.com/AcmeSoftwareLLC/device_user_agent/"
 
 [build-system]
 requires = ["pdm-backend"]
@@ -18,4 +28,5 @@ build-backend = "pdm.backend"
 
 
 [tool.pdm]
+version = { source = "file", path = "src/device_user_agent/__init__.py" }
 distribution = true
