@@ -1,5 +1,6 @@
 import 'package:device_user_agent/src/core/platform_agent_info.dart';
 
+/// A class that provides user agent information for the macOS platform.
 class MacosAgentInfo extends PlatformAgentInfo<MacOsDeviceInfo> {
   @override
   Future<MacOSAgentSource> initializeSource(

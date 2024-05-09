@@ -1,20 +1,25 @@
+/// A library that provides a user agent string for the current device.
 library device_user_agent;
 
 import 'package:device_user_agent/src/agent_info.dart';
 import 'src/web/io_user_agent.dart'
     if (dart.library.js_interop) 'src/web/web_user_agent.dart';
 
+/// A class that provides a user agent string for the current device.
 class DeviceUserAgent {
   const DeviceUserAgent._() : agentInfo = const AgentInfo();
 
+  /// The [AgentInfo] instance used to get the device information.
   final AgentInfo agentInfo;
 
+  /// The instance of [DeviceUserAgent].
   static DeviceUserAgent get instance {
     return _instance ??= const DeviceUserAgent._();
   }
 
   static DeviceUserAgent? _instance;
 
+  /// Builds user agent string for the current device.
   Future<String> build() async {
     if (webUserAgent.isNotEmpty) return webUserAgent;
 

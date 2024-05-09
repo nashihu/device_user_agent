@@ -1,5 +1,6 @@
 import 'package:device_user_agent/src/core/platform_agent_info.dart';
 
+/// A class that provides user agent information for the Windows platform.
 class WindowsAgentInfo extends PlatformAgentInfo<WindowsDeviceInfo> {
   @override
   Future<WindowsAgentSource> initializeSource(

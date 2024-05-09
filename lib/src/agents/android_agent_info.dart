@@ -1,5 +1,6 @@
 import 'package:device_user_agent/src/core/platform_agent_info.dart';
 
+/// A class that provides user agent information for the Android platform.
 class AndroidAgentInfo extends PlatformAgentInfo<AndroidDeviceInfo> {
   @override
   Future<AndroidAgentSource> initializeSource(
