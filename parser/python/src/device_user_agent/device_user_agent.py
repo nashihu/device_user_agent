@@ -16,7 +16,7 @@ class DeviceUserAgent(BaseModel):
 
     @classmethod
     def parse(cls, user_agent: str) -> "DeviceUserAgent | None":
-        user_agent_pattern = r"(?P<package_name>.+)/(?P<app_version_name>.+) \((?P<os_name>.+) (?P<os_version>.+); (?P<device_name>[\w\s]+); build:(?P<app_version_code>\d+)\) oem/(?P<device_manufacturer>.+) model/(?P<device_model>.+) screen/(?P<device_resolution>\d+\*\d+)/(?P<device_pixel_ratio>.+)"  # noqa
+        user_agent_pattern = r"(?P<package_name>.+)/(?P<app_version_name>.+) \((?P<os_name>.+) (?P<os_version>.+); (?P<device_name>.+); build:(?P<app_version_code>\d+)\) oem/(?P<device_manufacturer>.+) model/(?P<device_model>.+) screen/(?P<device_resolution>\d+\*\d+)/(?P<device_pixel_ratio>.+)"  # noqa
         regex = compile(user_agent_pattern)
         match = regex.match(user_agent)
 
